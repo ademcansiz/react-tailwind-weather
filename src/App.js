@@ -1,33 +1,38 @@
+import React from 'react'
 import { useState,useEffect } from "react";
-import axios from "axios";
 import Weather from "./components/Weather";
+import City from "./components/City";
+import axios from "axios";
 
 function App() {
+  const [activeComponent, setActiveComponent] = useState();
+  const [city, setCity] =  useState();
   const [weather , setWeather] = useState();
-  const city = "istanbul"
  
   const getWeatherData = async (city) => {
     const key = process.env.REACT_APP_WEATHER_API_KEY;
     const lang = navigator.language.split("-")[0];
+
     try {
       const { data } = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=${lang}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city.toLowerCase()}&appid=${key}&lang=${lang}&units=metric`
       );
       setWeather(data);
     } catch {
-      alert("Veri alinirken hata olustu.");
+      alert("Veri alinirken bir hata oluştu...");
     }
   };
 
   useEffect(() => {
-    return (    
-      getWeatherData(city)
-    )
-  }, []);
+    city && getWeatherData(city) 
+  }, [city]);
 
   return (
     <div className="bg-neutral-800 h-full">
-      <Weather weather={weather}></Weather>
+     {
+     activeComponent == null ? <Weather city={city} setCity={setCity} setActiveComponent={setActiveComponent} >
+     </Weather> :  <City weather={weather} setActiveComponent={setActiveComponent}></City>
+     }   
     </div>
   );
 }
