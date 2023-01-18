@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 
 function Weather({city,setCity,setActiveComponent}) {
-      const iller =['Adana', 'Adıyaman', 'Afyon', 'Ağrı', 'Amasya', 'Ankara', 'Antalya', 'Artvin',
+    const iller =['Adana', 'Adıyaman', 'Afyon', 'Ağrı', 'Amasya', 'Ankara', 'Antalya', 'Artvin',
     'Aydın', 'Balıkesir', 'Bilecik', 'Bingöl', 'Bitlis', 'Bolu', 'Burdur', 'Bursa', 'Çanakkale',
     'Çankırı', 'Çorum', 'Denizli', 'Diyarbakır', 'Edirne', 'Elazığ', 'Erzincan', 'Erzurum', 'Eskişehir',
     'Gaziantep', 'Giresun', 'Gümüşhane', 'Hakkari', 'Hatay', 'Isparta', 'Mersin', 'İstanbul', 'İzmir', 
@@ -33,7 +33,7 @@ function Weather({city,setCity,setActiveComponent}) {
     <div className='flex items-center justify-center flex-wrap gap-x-4 '>
     {value.map((item, index) => (
         <button key={index} onClick={()=>(setCity(value[index]))}>
-          <a onClick={()=>(setActiveComponent(city))} className='flex gap-x-4 bg-neutral-500 m-4 text-xl text-white p-4 w-64 rounded-md' key={index}>                
+          <a onClick={()=>(setActiveComponent(city))} className='text-center flex gap-x-4 border-white border-2 m-4 text-xl text-white p-4 w-64 rounded-md' key={index}>                
             {item}
           </a>
         </button>

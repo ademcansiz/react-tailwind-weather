@@ -1,5 +1,6 @@
 body {
-    background-color: rgb(38 38 38);
+	background-color: rgb(3 105 161);
+  background: linear-gradient( 90deg, rgb(9, 144, 255) 0%, rgba(63, 198, 252, 1) 100% )
   }
   .full-screen {
     position: absolute;
@@ -8,3 +9,7 @@ body {
     width: 100%;
     height: 100%;
   }
+*{
+  margin: 0;
+  padding: 0;
+}

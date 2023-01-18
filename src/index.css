@@ -1,0 +1,6 @@
+.weather-img{
+    background:url(../img/weather.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}

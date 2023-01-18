@@ -28,7 +28,7 @@ function App() {
   }, [city]);
 
   return (
-    <div className="bg-neutral-800 h-full">
+    <div className="h-full">
      {
      activeComponent == null ? <Weather city={city} setCity={setCity} setActiveComponent={setActiveComponent} >
      </Weather> :  <City weather={weather} setActiveComponent={setActiveComponent}></City>
