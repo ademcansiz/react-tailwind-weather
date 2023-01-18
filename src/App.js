@@ -26,7 +26,7 @@ function App() {
   useEffect(() => {
     city && getWeatherData(city) 
   }, [city]);
-
+  
   return (
     <div className="h-full">
      {

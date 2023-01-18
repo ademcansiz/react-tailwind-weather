@@ -3,6 +3,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import {useState} from 'react';
 
 
+
 function Weather({city,setCity,setActiveComponent}) {
     const iller =['Adana', 'Adıyaman', 'Afyon', 'Ağrı', 'Amasya', 'Ankara', 'Antalya', 'Artvin',
     'Aydın', 'Balıkesir', 'Bilecik', 'Bingöl', 'Bitlis', 'Bolu', 'Burdur', 'Bursa', 'Çanakkale',
