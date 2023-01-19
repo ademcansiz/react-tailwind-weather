@@ -15,7 +15,7 @@ function App() {
 
     try {
       const { data } = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city.toLowerCase()}&appid=${key}&lang=${lang}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city.toLowerCase()}&appid=f5576917f00e5df7473c0a7790d5c17e&lang=${lang}&units=metric`
       );
       setWeather(data);
     } catch {
